@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela 1 -->
+    <div id="tela1" class="tela">
+        <div class="container">
+            <button id="addBtn">Add</button>
+            <button id="visualizarBtn">Visualizar</button>
+        </div>
+    </div>
+    
+    <!-- Tela 3 (Formulário de Adição + Seleção de Listas) -->
+    <div id="tela3" class="tela" style="display: none;">
+        <div class="container">
+            <button id="criarListaBtn">Criar Lista</button>
+            <select id="minhasListas">
+                <option value="">Suas Listas</option>
+            </select>
+            <div id="imagePreview" class="image-placeholder">Imagem</div>
+            <textarea id="imageDescription" placeholder="Caixa para escrever informação"></textarea>
+            <input type="text" id="urlLink" placeholder="URL ou link externo">
+            <button id="salvarBtn">Salvar</button>
+            <button id="voltarBtn">Voltar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

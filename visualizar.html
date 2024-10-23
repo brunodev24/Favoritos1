@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Itens Salvos</title>
+    <link rel="stylesheet" href="visualizar.css">
+</head>
+<body>
+    <div class="container">
+      <br><br>
+        <!-- Contêiner fixo para o dropdown -->
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="dropdown-btn">Suas Listas</button>
+                <button class="delete-btn" onclick="deletarSelecionado()">Deletar</button>
+                <button class="search-btn">Buscar</button> <!-- Novo botão de busca -->
+                <div class="dropdown-content" id="listasDropdown"></div> <!-- Onde as listas vão aparecer -->
+            </div> <!-- Onde as listas vão aparecer -->
+            <!-- Exemplo de item da lista -->
+        </div>
+
+        <!-- Contêiner para grupos de formulários (listas do usuário) -->
+        <div id="groupContainer"></div>
+        
+        <!-- Novo contêiner para os resultados da busca -->
+        <div id="searchResultContainer" class="search-result-group"></div>
+            </div>
+        </div>
+
+        <!-- Caixa Modal para Notas -->
+        <div id="modalNotas" class="modal">
+            <div class="modal-content">
+                <p id="notasDescricao"></p> <!-- Aqui vai o texto da descrição -->
+                <button class="close-btn" onclick="fecharModalNotas()">Fechar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="visualizar.js"></script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+/* Estilo base da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+}
+
+/* Contêiner principal */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contêiner para o dropdown com sticky */
+.dropdown-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Alinhar os botões dentro do contêiner de dropdown */
+.dropdown {
+  display: flex;
+  justify-content: space-between; /* Distribui os botões entre os extremos e o centro */
+  align-items: center;
+  padding: 10px; /* Adiciona um pouco de espaço ao redor */
+}
+
+/* Centralizar o botão dropdown */
+.dropdown-btn {
+  margin: 0 auto; /* Remove a margem automática para centralizar */
+}
+
+/* Ajuste nas margens para melhor espaçamento */
+.delete-btn, .search-btn {
+  margin: 0; /* Remove margens laterais desnecessárias */
+}
+
+/* Adicionar espaço entre os botões */
+.dropdown > * {
+  flex: 1; /* Garante que todos os botões ocupem o mesmo espaço */
+  text-align: center; /* Centraliza o conteúdo dos botões */
+}
+
+
+
+
+/* Botão do dropdown com tamanho fixo e truncamento de texto */
+.dropdown-btn {
+  width: 200px; /* Define um tamanho fixo para o botão */
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-align: center;
+  white-space: nowrap; /* Evita que o texto quebre em múltiplas linhas */
+  overflow: hidden; /* Oculta o texto que ultrapassar o tamanho do botão */
+  text-overflow: ellipsis; /* Adiciona "..." quando o texto for muito longo */
+}
+
+.dropdown-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Ajuste da caixa do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  max-width: 90vw;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 60px; /* Ajusta a distância da caixa em relação ao botão */
+}
+
+/* Ajuste nos links do dropdown para que toda a área seja clicável */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Trunca o texto se for muito longo */
+  width: 100%; /* Faz com que o item ocupe 100% da largura */
+  box-sizing: border-box; /* Garante que o padding seja considerado na largura total */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo para o botão de deletar */
+.delete-btn {
+  padding: 5px 15px;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Estilo para o botão de busca */
+.search-btn {
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: #17a2b8; /* Cor diferenciada para o botão de busca */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px; /* Espaço entre o botão delete e o botão de busca */
+  transition: background-color 0.3s;
+  font-weight: bold; /* Deixa o texto do botão mais chamativo */
+}
+
+.search-btn:hover {
+  background-color: #138496; /* Efeito ao passar o mouse sobre o botão */
+}
+
+/* Estilo para o item da lista no dropdown */
+.lista-item {
+  display: flex;
+  justify-content: space-between; /* Mantém o nome à esquerda e o botão à direita */
+  align-items: center;
+  padding: 5px;
+}
+
+/* Estilo para o botão de deletar */
+.btn-delete {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.btn-delete:hover {
+  background-color: darkred;
+}
+
+
+/* Contêiner para grupos de formulários */
+#groupContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Contêiner para cada grupo de 3 formulários */
+.image-group {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100% !important;
+  margin: 0 auto 20px auto;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo para cada formulário individual */
+.image-form {
+  flex: 1;
+  max-width: 30%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Estilo das imagens */
+.image-form img {
+  max-width: 100%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Estilo para a imagem selecionada */
+.selecionada {
+  border: 3px solid #007bff;
+  opacity: 0.8;
+}
+
+/* Estilo para o contêiner de botões */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+/* Estilo para os botões "Link" e "Notas" */
+.btn {
+  width: 45%;
+  padding: 5px;
+  font-size: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+/* Botão "Link" (verde) */
+.btn-link {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-link:hover {
+  background-color: #218838;
+}
+
+/* Botão "Notas" (amarelo) */
+.btn-notes {
+  background-color: #ffc107;
+  color: black;
+}
+
+.btn-notes:hover {
+  background-color: #e0a800;
+}
+
+/* Estilo da caixa modal para notas */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  width: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.modal-content p {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.close-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.close-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Novo contêiner para os resultados da busca */
+#searchResultContainer {
+  display: none; /* Começa escondido, será mostrado quando a busca for feita */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center; /* Centraliza os resultados */
+}
+
+/* Estilo das imagens no resultado da busca */
+.search-result-form img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contêiner de botões para os resultados da busca */
+.search-result-btn-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+/* Formulário que agrupa cada imagem e seus botões no resultado da busca */
+.search-result-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .search-result-form {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-result-form {
+    width: 100%;
+  }
+}
+
